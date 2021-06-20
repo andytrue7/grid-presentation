@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+}
+
+ul.about {
+  margin-right: 20px;
+}
+
+.grid-container-img {
+  margin-left: 20px;
+}
+
+.wrapper-item {
+  margin-right: 20px;
+}
+
+img.areas-code {
+  margin-right: 50px;
+}
+
+img.grid-start {
+  margin-right: 50px;
+}

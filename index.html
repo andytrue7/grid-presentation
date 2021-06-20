@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+    
+    <link rel="stylesheet" href="dist/styles.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h2>CSS GRID</h2>
+          <img src="assets/grid-logo.png">
+        </section>
+				<section>
+          <h3>What`s css grid?</h3>
+          <div class="wrapper">
+            <ul class="about">
+              <li>CSS Grid Layout is a two-dimensional grid-based layout system</li>
+              <li>It was created by CSS Working Group in 2017</li>
+            </ul>
+            <img src="assets/whats_grid.png">
+          </div>
+        </section>
+        <section>
+          <h3>Browser support</h3>
+          <img src="assets/grid_browser_support.png">
+          <p>browser support reached 94% in 2020</p>
+        </section>
+        <section>
+          <h3>Important terminology</h3>
+        </section>
+        <section>
+          <section>
+            <h3>Grid container</h3>
+            <pre>
+              <code>
+                <div class="container">
+                  <div class="item item-1"></div>
+                  <div class="item item-2"></div>
+                  <div class="item item-3"></div>
+                  .......
+                </div>
+              </code>
+            </pre>
+            <img class="grid-container-img" src="assets/grid_container.png" alt="">
+          </section>
+          <section>
+            <h3>Grid item</h3>
+            <pre>
+              <code>
+                <div class="container">
+                  <div class="item item-1"></div>
+                  <div class="item item-2"></div>
+                  <div class="item item-3">
+                    <p class="sub-item"></p>
+                  </div>
+                  .......
+                </div>
+              </code>
+            </pre>
+            <img class="grid-container-img" src="assets/grid_item.png" alt="">
+          </section>
+          <section>
+            <h3>Grid line</h3>
+            <img class="grid-container-img" src="assets/grid_line.png" alt="">
+          </section>
+          <section>
+            <div class="wrapper">
+              <div class="wrapper-item">
+                <h3>Grid cell</h3>
+                <img src="assets/grid_cell_2.png" alt="">
+              </div>
+              <div class="wrapper-item">
+                <h3>Grid track</h3>
+                <img src="assets/grid_track.png" alt="">
+              </div>
+              <div class="wrapper-item">
+                <h3>Grid area</h3>
+                <img src="assets/grid_area.png" alt="">
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <h3>Grid properties</h3>
+          <div class="wrapper">
+            <p>Properties for the parent (grid container)</p>
+            <p>Properties for the children (grid items)</p>
+          </div>
+        </section>
+        <section>
+          <h3>Properties for the grid container</h3>
+        </section>
+        <section>
+          <section>
+            <h3>display</h3>
+            <pre>
+              <code>
+                .container {
+                  display: grid | inline-grid;
+                }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>grid-template-columns</h3>
+            <h3>grid-template-rows</h3>
+<pre>
+  <code>
+    .container {
+      grid-template-columns: [first] 40px [line2] 50px auto;
+      grid-template-rows: 25% 100px auto;
+    }
+  </code>
+</pre>
+            <img src="assets/grid_template_columns.png" alt="">
+          </section>
+          <section>
+            <h3>grid-template-areas</h3>
+            <div class="wrapper">
+              <img class="areas-code" src="assets/grid-template-areas-code.png" alt="">
+              <img class="areas-img" src="assets/grid-template-areas-img.png" alt=""> 
+            </div>
+          </section>
+          <section>
+            <h3>column-gap</h3>
+            <h3>row-gap</h3>
+<pre>
+  <code>
+    .container {
+      column-gap: 10px;
+      row-gap: 15px;
+    }    
+  </code>
+</pre>
+            <img src="assets/grid-gap.png" alt="">
+          </section>
+          <section>
+            <h3>justify-content</h3>
+<pre>
+  <code>
+    .container {
+      justify-content: start | end | center | space-between
+    }
+  </code>
+</pre>
+            <img src="assets/justify-content.png" alt="">
+          </section>
+          <section>
+            <h3>align-content</h3>
+<pre>
+  <code>
+    .container {
+      align-content: start | end | center | space-between
+    }
+  </code>
+</pre>
+            <img src="assets/align-content.png" alt="">
+          </section>
+        </section>
+        <section>
+          <h3>Properties for the grid items</h3>
+        </section>
+        <section>
+          <h4>Note</h4>
+          <p>float, display: inline-block, display: table-cell, vertical-align properties have no effect on a grid item</p>
+        </section>
+        <section>
+          <section>
+            <h5>grid-column-start, grid-column-end, grid-row-start, grid-row-end</h5>
+            <div class="wrapper">
+              <img class="grid-start" src="assets/grid-column-start.jpg" alt="">
+              <img src="assets/grid-column-start-img.jpg" alt="">
+            </div>
+          </section>
+          <section>
+            <h3>justify-self</h3>
+<pre>
+  <code>
+    .item {
+      justify-self: start | end | center | stretch
+    }
+  </code>
+</pre>
+            <img src="assets/justify-self.jpg" alt="">
+          </section>
+          <section>
+            <h3>align-self</h3>
+<pre>
+  <code>
+    .item {
+      align-self: start | end | center | stretch
+    }
+  </code>
+</pre>
+            <img src="assets/align-self.jpg" alt="">
+          </section>
+        </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+        
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
